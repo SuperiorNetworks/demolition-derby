@@ -1,6 +1,6 @@
-# Versioning Policy — ShowCtrl Lab
+# Versioning Policy — Iron District
 
-All three repos in the ShowCtrl Lab organization use the same tag format so releases are easy to correlate across projects.
+All three repos in the Iron District project use the same tag format so releases are easy to correlate across projects.
 
 ## Tag Format
 

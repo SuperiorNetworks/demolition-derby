@@ -1,275 +1,208 @@
-# DEMOLITION DERBY — Master Project Hub
+# DEMOLITION DERBY
+### A Remote Show-Control & Structural Collapse Simulation Program
+**Superior Networks LLC · Dwain Henderson Jr. & David · Dayton, OH**
 
-> *Two engineers. Two cities. One system built from scratch.*
-
-**DJ** · Dayton, OH &nbsp;|&nbsp; **David** · Detroit, MI  
-**Organization:** [SuperiorNetworks](https://github.com/SuperiorNetworks)  
-**Status:** Active — Phase 1 in progress  
-**Budget cap:** $500 total ($250 DJ / $250 David)
+> *Two engineers. Two boards. One system built from scratch.*
 
 ---
 
-## The Project
+## 🗓️ PHASE 1 TARGET DATE — **Friday, July 10, 2025**
 
-**Demolition Derby** is a remote-collaborative engineering program built by DJ and David — two engineers who decided to stop talking about building something serious and actually do it. The project has three interlocking deliverables:
-
-**DETONATOR** — a browser-based show-control system for an ESP32 T-Display S3. It lets you design a cue list of relay triggers synchronized to an audio track, simulate the show visually, monitor IP cameras, run continuity tests, and execute the show through a gated approval workflow. It exports a `.tdproj` file the microcontroller reads directly.
-
-**DOWNRANGE DOCUMENT** — an Arduino-based sensor data pipeline that captures acceleration, sound pressure, and vibration during physical test events. Data syncs to a VPS, runs through Python analytics notebooks, and calibrates Blender rigid-body simulations.
-
-**THE GRID** — a modular 1:50 scale city environment built from 3D-printed structures. Physical tests are measured, logged, and compared against Blender simulations frame-by-frame.
-
-> **Helper note — start here every session.** Check the [Project Board](../../projects) for open tasks, open the relevant sub-project repo, commit your work, and tag a release when a phase gate passes. Update the budget tracker below after every purchase.
+**Goal:** Both Dwain and David arrive with their individual 4×6 project boards, assemble them side-by-side, and fire the first live relay-triggered sequences together.
 
 ---
 
-## Sub-Project Index
+## Program Overview
 
-| Repo | Codename | Description | Status |
-|------|----------|-------------|--------|
-| [detonator](https://github.com/SuperiorNetworks/detonator) | **DETONATOR** | Browser show-control editor — audio timeline, relay triggers, sprite simulation, camera monitoring, continuity testing, live workflow | Active |
-| [downrange-document](https://github.com/SuperiorNetworks/downrange-document) | **DOWNRANGE DOCUMENT** | Sensor firmware, Python analytics, Blender simulation pipeline, six-month project documentation | Active |
-| *(this repo)* | **DEMOLITION DERBY** | Master hub — project plan, Gantt, budget, phase gates, cross-repo links | Active |
+Demolition Derby is a three-repository engineering program building a complete remote show-control system: a browser-based sequencing editor, a relay-trigger hardware board, and a sensor/analytics/simulation pipeline. The program is developed in parallel by two engineers (Dwain and David) who each build and test independently, then integrate at defined milestone dates.
 
----
+The program is organized into three sub-projects, each with its own GitHub repository:
 
-## Six-Month Project Plan
-
-### Phase Overview
-
-| Phase | Weeks | Name | Key Deliverable | Gate Criteria |
-|-------|-------|------|-----------------|---------------|
-| **1 — FOUNDATION** | 1–4 | Lay the Ground | Repo structure, sensor bench, editor scaffold, safety docs | Hardware powers on; editor loads in browser; safety checklist signed |
-| **2 — VALIDATION** | 5–8 | First Strike | First physical test, sensor calibration, timeline editor functional | Sensor data captured and plotted; 3+ triggers fire correctly |
-| **3 — OBSERVATION** | 9–12 | Eyes Open | Dual-camera rig, synchronized playback, sprite simulation live | Camera streams in editor; sprites flip on relay state change |
-| **4 — PIPELINE** | 13–20 | The Machine | Full data pipeline: SD → VPS → Python → Blender → GitHub release | End-to-end pipeline runs unattended; Blender sim matches test video |
-| **5 — FINAL EVENT** | 21–26 | The District Falls | Full show run on modular city, debrief, public v1.0 release | Show runs start-to-finish with no E-stop; debrief published |
+| Codename | Repository | Role |
+|----------|-----------|------|
+| **DEMOLITION DERBY** | [SuperiorNetworks/demolition-derby](https://github.com/SuperiorNetworks/demolition-derby) | Master hub — this document |
+| **DETONATOR** | [SuperiorNetworks/detonator](https://github.com/SuperiorNetworks/detonator) | Browser show-control editor (React, relay sequencing, live workflow) |
+| **DOWNRANGE DOCUMENT (DD)** | [SuperiorNetworks/downrange-document](https://github.com/SuperiorNetworks/downrange-document) | Sensor firmware, Python analytics, Blender 3D reconstruction pipeline |
 
 ---
 
-### Gantt Chart
+## Phase 1 — The Board (Iteration 1)
 
-```mermaid
-gantt
-    title Demolition Derby — Six-Month Master Schedule
-    dateFormat  YYYY-MM-DD
-    axisFormat  %b %d
+### Decision Log — Recorded June 8, 2026
 
-    section Phase Gates
-    Phase 1 — Foundation Gate     :milestone, g1, 2026-06-28, 0d
-    Phase 2 — Validation Gate     :milestone, g2, 2026-07-26, 0d
-    Phase 3 — Observation Gate    :milestone, g3, 2026-08-23, 0d
-    Phase 4 — Pipeline Gate       :milestone, g4, 2026-10-04, 0d
-    Phase 5 — The District Falls  :milestone, g5, 2026-11-22, 0d
+The following decisions were made jointly by Dwain and David and are locked for Phase 1. They represent a deliberate choice to keep the first iteration simple, functional, and demonstrable before adding complexity.
 
-    section DJ — Software & Ops
-    Repo setup, project board, safety docs       :dj1, 2026-06-07, 2w
-    DETONATOR editor core tabs                    :dj2, after dj1, 3w
-    VPS sync, ftp.sndaten.com endpoint           :dj3, after dj2, 2w
-    Python analytics notebooks                   :dj4, 2026-08-01, 5w
-    Release tagging, .tdproj export testing      :dj5, 2026-09-01, 4w
-    Final event logistics, debrief doc           :dj6, 2026-10-15, 6w
+**Board Dimensions:** 4 feet wide × 6 feet long (4×6). Each engineer builds one identical board independently. The boards are designed to be portable — flat on a round table or card table at waist height — and can be assembled together when both engineers meet.
 
-    section David — Hardware & Fabrication
-    Electronics bench, sensor logger build       :dv1, 2026-06-07, 3w
-    Basic 3D printed test structures             :dv2, after dv1, 4w
-    Camera mounts, dual-camera rig               :dv3, 2026-07-22, 3w
-    Modular city environment fabrication         :dv4, 2026-09-01, 8w
-    Final setup, repair kit, spare parts         :dv5, 2026-10-28, 4w
+**Structure Materials (Phase 1):** Wooden dominoes only. David sourced a 201-piece colorful bulk domino set from Temu. These will be used to build three structure pads on the board: one large pad, one medium pad, and one small pad. City scenery and infrastructure will be placed adjacent to each pad. Building materials will be iterated in Phase 2 and beyond.
 
-    section Joint
-    Sensor calibration runs                      :jt1, 2026-06-21, 3w
-    Sprite image capture and upload              :jt2, 2026-07-15, 2w
-    Blender model import and calibration         :jt3, 2026-08-15, 4w
-    Full show rehearsal                          :jt4, 2026-11-01, 3w
-```
+**Phase 1 Domino Set — Purchased:**
 
-> **Helper note:** Milestones (diamonds) are hard go/no-go gates. Do not start the next phase until the gate criteria above are met. Tag each gate as `v0.N-phaseN-gate` on all three repos simultaneously. See [VERSIONING.md](VERSIONING.md) for the full policy.
+![201-piece Colorful Domino Building Blocks](docs/assets/dominos-colorful-201pc.png)
 
----
+> **201 Colorful Domino Building Blocks** — Fun Stacking and Construction Toy. Wooden, multi-color. Purchased from Temu.
+> [Product Link](https://www.temu.com/201-colorful-domino-building-blocks-a-fun-stacking-and-construction-toy--halloween-birthdays-and-christmas-gifts-educational--colors-may--g-605976816111107.html)
 
-### Phase 1 — FOUNDATION (Weeks 1–4)
+**Relay Wiring (Phase 1):** Four-channel wiring only. Relays are permanently mounted on the board in a visually appealing, stylish arrangement. Trace wires are routed to look clean and intentional — not hidden, but part of the aesthetic. Each relay terminates at a pre-wired pad positioned at the three structure zones.
 
-**Objective.** Establish the complete technical foundation: repository structure, development environment, sensor hardware bench, DETONATOR editor scaffold, safety documentation, and remote collaboration workflow.
+**Phase 1 Scope — What IS included:**
 
-**DJ tasks.** Initialize all three repos with branch protection on `main`. Set up the GitHub Project board with columns: Backlog, In Progress, In Review, Done. Write and sign the safety checklist. Configure VPS storage at `ftp.sndaten.com` with a `/irondistrict/` project folder. Deploy the DETONATOR editor to Manus hosting for David to access from Detroit.
+- 4×6 plywood or foam-core project board per engineer
+- Permanent relay mount (4-channel, styled)
+- Pre-wired pads at large, medium, and small structure zones
+- Domino structures at each pad
+- City/infrastructure scenery adjacent to pads
+- DETONATOR web app talking to relay board over internet (4-channel)
+- Proof-of-concept: browser fires relay sequence, relay fires at pad
 
-**David tasks.** Assemble the Arduino sensor logger on a breadboard (MPU-6050 + MAX4466 + SD card module). Verify sensor logger firmware compiles and logs a 10-second sample CSV. Print two simple 1:50 scale test structures with scored weak points. Document the bench setup with photos and push to `downrange-document/hardware/`.
+**Phase 1 Scope — What is NOT included (deferred to later phases):**
 
-**Joint tasks.** Agree on the `.tdproj` JSON schema. Agree on the sensor CSV column format. Hold weekly 30-minute build review every Sunday.
+- Cameras (deferred to Phase 3)
+- Sensors / data logging (deferred to Phase 3)
+- Additional pyrotechnic types beyond small firecrackers (deferred)
+- Blender simulation pipeline (deferred to Phase 3–4)
+- Automated data pipeline (deferred to Phase 4)
 
-**Gate criteria:** All hardware powers on without errors. DETONATOR editor loads in browser. Safety checklist signed by both. At least one sample sensor CSV committed to the repo.
-
----
-
-### Phase 2 — VALIDATION: First Strike (Weeks 5–8)
-
-**Objective.** Run the first physical test, validate sensor data capture, and confirm the DETONATOR editor can fire at least three relay triggers correctly in simulation mode.
-
-**DJ tasks.** Build and test the Python analytics notebook against the Phase 1 sample CSV. Create the first `.tdproj` file with 5 triggers and verify export/import round-trip. Tag `v0.1-phase2-gate` release on the DETONATOR repo.
-
-**David tasks.** Run first physical test: servo-triggered pin release on a printed structure. Capture dual-angle video and at least 30 seconds of sensor data. Upload raw data to `ftp.sndaten.com/irondistrict/phase2/`.
-
-**Joint tasks.** Review sensor data plot together; identify calibration offsets. Compare video frame timestamps against sensor spike timestamps. Decide on Blender import format (FBX vs. OBJ) for Phase 4.
-
-**Gate criteria:** Sensor data captured and plotted with no missing samples. At least 3 triggers fire correctly in DETONATOR simulation. Phase 2 test video committed as a GitHub Release asset.
-
----
-
-### Phase 3 — OBSERVATION: Eyes Open (Weeks 9–12)
-
-**Objective.** Add dual-camera observation to DETONATOR, implement sprite simulation, and synchronize camera footage with the audio timeline.
-
-**DJ tasks.** Implement camera tab: MJPEG stream display, snapshot capture. Implement sprite simulation: before/after image swap on relay state change. Capture before/after sprite images from Phase 2 test footage.
-
-**David tasks.** Build permanent dual-camera mount for the test rig. Configure both cameras with static IP addresses. Test MJPEG stream URLs and confirm they load in the DETONATOR camera tab.
-
-**Joint tasks.** Record a full synchronized test: audio + sensor + dual camera. Verify sprite images flip at the correct audio timestamps. Review Blender model import workflow.
-
-**Gate criteria:** Both camera streams visible in editor. Sprites flip correctly on relay state change. Synchronized recording committed as a Phase 3 release asset.
-
----
-
-### Phase 4 — PIPELINE: The Machine (Weeks 13–20)
-
-**Objective.** Build and validate the complete automated data pipeline from sensor SD card through VPS sync, Python analysis, Blender calibration, and GitHub release artifact.
-
-**DJ tasks.** Automate VPS sync: SD card → `ftp.sndaten.com` → Python notebook → plot PNG → GitHub Release. Write Blender Python import script that reads sensor CSV and sets rigid-body parameters. Document the full pipeline in `docs/development-workflow.md`.
-
-**David tasks.** Fabricate first modular city block (2–3 connected structures with shared weak points). Run a multi-structure test event and capture full sensor + camera dataset. Provide Blender `.blend` file with basic city geometry.
-
-**Joint tasks.** Calibrate Blender rigid-body solver against Phase 3 physical test data. Produce first comparison: physical video vs. Blender render side-by-side. Tag `v0.9-phase4-gate` release with all pipeline artifacts.
-
-**Gate criteria:** End-to-end pipeline runs unattended from raw CSV to GitHub Release artifact. Blender simulation visually matches physical test video. Pipeline documented with step-by-step instructions.
-
----
-
-### Phase 5 — FINAL EVENT: The District Falls (Weeks 21–26)
-
-**Objective.** Execute a complete show run of the modular city environment, produce the final comparison video, publish all artifacts as a v1.0 release, and write the project debrief.
-
-**DJ tasks.** Load final `.tdproj` into DETONATOR. Run full continuity test → approval → arm → countdown → execute workflow. Produce final debrief document: what worked, what changed, lessons learned.
-
-**David tasks.** Complete modular city environment (minimum 6 structures). Prepare repair kit and spare parts for final event day. Set up and test full rig the day before the event.
-
-**Joint tasks.** Hold full dress rehearsal one week before final event. Execute final show run with all systems live. Publish v1.0 release with: `.tdproj`, sensor data, Python plots, Blender file, comparison video, debrief.
-
-**Gate criteria:** Show runs start-to-finish with no E-stop activation. All v1.0 artifacts committed and tagged. Debrief document published.
-
----
-
-## Budget Tracker
-
-> **Helper note:** Update this table after every purchase. Keep receipts in a shared folder. Flag any item that pushes a category over budget before ordering.
-
-### DJ — Dayton, OH ($250 cap)
-
-| Item | Vendor | Est. Cost | Actual | Status |
-|------|--------|-----------|--------|--------|
-| ESP32 T-Display S3 | AliExpress / Amazon | $18 | — | Pending |
-| 16-channel relay module | Amazon | $14 | — | Pending |
-| Breadboard + jumper wires | Amazon | $8 | — | Pending |
-| USB-C power supply (5V 3A) | Amazon | $10 | — | Pending |
-| VPS hosting (6 months) | DigitalOcean / Linode | $30 | — | Pending |
-| SD card (32 GB) | Amazon | $8 | — | Pending |
-| Misc. wiring, connectors | Local / Amazon | $15 | — | Pending |
-| **DJ Subtotal** | | **$103** | — | |
-
-### David — Detroit, MI ($250 cap)
-
-| Item | Vendor | Est. Cost | Actual | Status |
-|------|--------|-----------|--------|--------|
-| Arduino Mega 2560 | Amazon | $22 | — | Pending |
-| MPU-6050 accelerometer (×2) | Amazon | $10 | — | Pending |
-| MAX4466 sound sensor (×2) | Amazon | $12 | — | Pending |
-| SD card module | Amazon | $6 | — | Pending |
-| IP cameras (×2, MJPEG) | Amazon | $50 | — | Pending |
-| PLA filament (1 kg) | Amazon / local | $22 | — | Pending |
-| Resin for detail prints | Amazon | $25 | — | Pending |
-| Plaster / casting supplies | Hardware store | $20 | — | Pending |
-| Servo motors (×4) | Amazon | $16 | — | Pending |
-| Solenoid latches (×2) | Amazon | $18 | — | Pending |
-| Misc. hardware, fasteners | Hardware store | $15 | — | Pending |
-| **David Subtotal** | | **$216** | — | |
-
-### Combined
-
-| | DJ | David | Total |
-|--|-----|-------|-------|
-| **Estimated** | $103 | $216 | **$319** |
-| **Cap** | $250 | $250 | **$500** |
-| **Remaining** | $147 | $34 | **$181** |
-
----
-
-## Repo Comparison — Merge Recommendations
-
-The two sub-project repos were built independently and share overlapping concepts that need to be unified. These corrections should be applied before Phase 2 begins.
-
-| # | Concept | Gap | Fix |
-|---|---------|-----|-----|
-| 1 | **Data schema** | DETONATOR has `.tdproj` JSON; DOWNRANGE DOCUMENT has sensor CSV — no cross-reference | Add `sensorDataUrl` field to `.tdproj`; add `docs/data-schema.md` to DETONATOR repo |
-| 2 | **Relay numbering** | DETONATOR uses R1–R16; DOWNRANGE DOCUMENT uses generic "channel" language | Standardize R1–R15 effects, R16 continuity test across both repos |
-| 3 | **Camera config** | DETONATOR has full `Camera` interface; DOWNRANGE DOCUMENT has no camera config files | Add `cameras/README.md` to DOWNRANGE DOCUMENT using the same field names as DETONATOR |
-| 4 | **Continuity firmware** | DETONATOR simulates continuity in browser; no matching Arduino sketch exists | Add `firmware/continuity_test/` to DOWNRANGE DOCUMENT with an Arduino sketch for R16 |
-| 5 | **E-Stop hardware** | DETONATOR has software E-stop; DOWNRANGE DOCUMENT safety docs mention it abstractly | Add wiring diagram to DOWNRANGE DOCUMENT `hardware/` for physical E-stop GPIO interrupt |
-| 6 | **Phase workflow mapping** | DETONATOR's 7-step show workflow is not linked to the Phase 5 deliverable | Add a note to both READMEs: the 7-step workflow IS the Phase 5 deliverable |
-| 7 | **Audio timeline** | DOWNRANGE DOCUMENT Phase 3 references "synchronized playback" but has no audio tooling | Add a note to DOWNRANGE DOCUMENT: DETONATOR is the synchronization tool |
-| 8 | **VPS sync docs** | DOWNRANGE DOCUMENT has `ftp.sndaten.com` sync docs; DETONATOR has none | Add `SYNC.md` to DETONATOR explaining the `/irondistrict/` VPS folder structure |
-| 9 | **Sprite vs. Blender** | Both repos have visual components that appear redundant | Document clearly: DETONATOR sprites = real-time preview; DOWNRANGE DOCUMENT Blender = post-event analysis |
-| 10 | **Release tags** | Neither repo has any tags yet | Both repos tag simultaneously at each gate: `v0.N-phaseN-gate` |
-
----
-
-## Phase Gate Review Template
-
-Each phase gate review should answer these five questions and produce a written record committed to `docs/phase-gates/`:
-
-1. Were all gate criteria met? If not, which were missed and why?
-2. Decision: **Go** / **No-Go** / **Repeat with changes**?
-3. What is the single most important thing to fix before the next phase?
-4. Are we still within budget? Updated budget tracker committed?
-5. Is the GitHub Release tagged with all required artifacts?
-
-> **Helper note:** Copy `docs/phase-gates/phase-gate-template.md`, fill it in, and commit it as `docs/phase-gates/phase-N-review.md` in this repo.
-
----
-
-## Development and Management Instructions
-
-> **Helper note:** This section is the operating manual. Read it at the start of every work session.
-
-**Branch strategy.** `main` is protected — no direct pushes. All work happens on feature branches named `phase-N/description` (e.g., `phase-1/sensor-logger-firmware`). Pull requests require one review before merge. Phase gate releases are tagged on `main` immediately after the gate review passes.
-
-**Weekly workflow.** Every Sunday, both engineers push all in-progress work to their feature branch, open or update GitHub Issues for any blockers, join the 30-minute build review call, update the budget tracker if any purchases were made, and move completed Project board cards to Done.
-
-**Release tagging.** Tags follow the format `vMAJOR.MINOR-phaseN-gate`. Each release must include a description summarizing what was completed, all relevant artifacts attached (sensor CSV, `.tdproj` file, photos, video clips), and an updated budget tracker screenshot.
-
-**Data sync.** Sensor data and project files are synced to `ftp.sndaten.com/irondistrict/` using the workflow documented in `downrange-document/host-tools/sync/README.md`. The folder structure is:
+### Board Layout Concept
 
 ```
-ftp.sndaten.com/irondistrict/
-├── phase1/
-│   └── sample_sensors.csv
-├── phase2/
-│   ├── test_001_sensors.csv
-│   └── test_001_metadata.json
-└── releases/
-    └── v0.1-phase1-gate/
+┌─────────────────────────────────────────────┐
+│  4 ft wide × 6 ft long — PROJECT BOARD       │
+│                                              │
+│  ┌──────────────┐   ┌────────┐   ┌──────┐   │
+│  │  LARGE PAD   │   │  MED   │   │ SML  │   │
+│  │  (dominoes)  │   │  PAD   │   │ PAD  │   │
+│  │  R1 ──────── │   │  R2 ── │   │ R3 ──│   │
+│  └──────────────┘   └────────┘   └──────┘   │
+│                                              │
+│  [city scenery / infrastructure]             │
+│                                              │
+│  ┌──────────────────────────────────────┐    │
+│  │  RELAY BOARD (4-ch, styled mount)    │    │
+│  │  R1  R2  R3  R4  — trace wired       │    │
+│  └──────────────────────────────────────┘    │
+│                                              │
+│  Board sits flat on card table (waist ht)    │
+└─────────────────────────────────────────────┘
+```
+
+### Division of Labor
+
+| Engineer | Primary Focus — Phase 1 |
+|----------|------------------------|
+| **Dwain** | Board visualization, physical layout, transport design, domino structure placement |
+| **David** | DETONATOR software development, relay firmware, web-to-relay communication |
+
+---
+
+## Phase 1 Conflict Analysis
+
+The following items in the original six-month plan **conflict with or are superseded by** the Phase 1 decisions above. These are not errors — they are deferred scope items that will be addressed in later phases.
+
+| Conflict | Original Plan | Phase 1 Decision | Resolution |
+|----------|--------------|-----------------|------------|
+| **Cameras** | Phase 2 included IP cameras and MJPEG streams | Phase 1 has no cameras | Deferred to Phase 3 |
+| **Sensors** | Phase 2 included accelerometers and IMU logging | Phase 1 has no sensors | Deferred to Phase 3 |
+| **Building materials** | Plan included concrete mix ratios, plaster, frangible resin | Phase 1 uses wooden dominoes only | Deferred to Phase 2 |
+| **Blender pipeline** | Phase 3–4 included 3D reconstruction from sensor data | No sensor data in Phase 1 | Deferred to Phase 4 |
+| **16-channel relay** | Original spec referenced up to 16 relay channels | Phase 1 uses 4 channels only | Expand in Phase 2 |
+| **Multi-user approval** | DETONATOR includes a multi-user arm/approve workflow | Phase 1 is single-user proof-of-concept | Full workflow in Phase 2 |
+| **Gantt timeline** | Six-month plan assumed parallel hardware + software tracks | Phase 1 is sequential: software first, then hardware integration | Gantt updated below |
+
+---
+
+## Expense Tracker
+
+All project expenses are logged here. Both engineers track independently and report at each integration session.
+
+| Date | Engineer | Item | Source | Unit Cost | Qty | Total |
+|------|----------|------|--------|-----------|-----|-------|
+| 2026-06-08 | Dwain | 201-pc Colorful Domino Set | Temu | $15.00 | 1 | $15.00 |
+| 2026-06-08 | David | 201-pc Colorful Domino Set | Temu | $15.00 | 1 | $15.00 |
+
+**Program Total to Date: $30.00**
+
+> Expenses will be updated after each purchase. Add a row to this table and commit to `main` with the message format: `expenses: add [item] [date]`
+
+---
+
+## Additional Building Materials & Scenery (Future Phases)
+
+The following items have been identified as candidates for Phase 2+ structure and scenery. No purchases have been made yet.
+
+1. **City Building Blocks (Temu search)** — [Browse options](https://www.temu.com/search_result.html?search_key=city%20building%20blocks&search_method=suggest&sprefix=city%20building%20blocks)
+2. **51-pc Magnetic Road Construction Kit** (crane + vehicles, STEM) — [Product link](https://www.temu.com/51pcs-magnetic-road-construction-kit-featuring-crane-and-vehicles-stem-educational-building-blocks-urban-development-toy-set-ideal-holiday-present-for-children-aged-3-and-above-g-606120026426430.html)
+3. **Wooden 3D Puzzle DIY Town Assembly Model** (with characters and accessories) — [Product link](https://www.temu.com/-building-wooden-3d-puzzle-diy--town-assembly-model-with-characters-and-accessories-creative-craft-toys--2--doll-ornaments-g-605842917145710.html)
+
+---
+
+## Six-Month Phase Roadmap
+
+| Phase | Codename | Target | Key Deliverable |
+|-------|----------|--------|----------------|
+| **1** | Lay the Ground | **July 10, 2025** 🎯 | Both boards built, 4-ch relay fires via DETONATOR over internet |
+| **2** | First Strike | August 2025 | 16-ch relay, expanded structures, second building material iteration |
+| **3** | Eyes Open | September 2025 | Cameras live, sensors logging, DOWNRANGE DOCUMENT pipeline active |
+| **4** | The Machine | October 2025 | Automated sensor → CSV → Python → Blender pipeline end-to-end |
+| **5** | The District Falls | November–December 2025 | Full show run — both boards, full sequence, full data capture |
+
+---
+
+## Sub-Project Status
+
+### DETONATOR — Browser Show-Control Editor
+**Repo:** [SuperiorNetworks/detonator](https://github.com/SuperiorNetworks/detonator)
+**Live App:** [safeshowctl-bmq5yryr.manus.space](https://safeshowctl-bmq5yryr.manus.space)
+**Status:** ✅ Active development — David
+
+DETONATOR is a React-based browser application providing a full show-control workflow: project management, audio-synchronized relay timeline, visual city simulation, camera monitoring, relay diagnostics, live execution with arm/approve/execute sequence, and event logs. The Phase 1 focus is proving that the web app can communicate with the relay board over the internet and fire a 4-channel sequence reliably.
+
+### DOWNRANGE DOCUMENT (DD) — Sensor + Analytics + Blender
+**Repo:** [SuperiorNetworks/downrange-document](https://github.com/SuperiorNetworks/downrange-document)
+**Status:** 🟡 Standby — activates Phase 3
+
+DOWNRANGE DOCUMENT contains the Arduino-compatible sensor logger firmware, Python analytics scripts for CSV post-processing, and the Blender import pipeline for 3D structural collapse reconstruction. This sub-project is in standby until Phase 3 when cameras and sensors are added to the boards.
+
+---
+
+## Repository Structure
+
+```
+demolition-derby/               ← You are here (master hub)
+├── README.md                   ← This document — master plan and status
+├── VERSIONING.md               ← Version and tagging conventions
+├── EXPENSES.md                 ← Full expense log (detailed)
+├── BOARD-DESIGN.md             ← Physical board design spec and notes
+├── LICENSE
+└── docs/
+    ├── assets/
+    │   └── dominos-colorful-201pc.png
+    ├── phase-gates/
+    │   └── phase-gate-template.md
+    └── phase-roadmap.md
 ```
 
 ---
 
-## License
+## How to Contribute
 
-MIT — see [LICENSE](LICENSE)
+Both engineers commit directly to `main` for documentation and notes. For software changes, use feature branches and pull requests in the respective sub-project repos (DETONATOR, DOWNRANGE DOCUMENT).
+
+Commit message conventions:
+
+| Prefix | Use for |
+|--------|---------|
+| `docs:` | README, notes, design decisions |
+| `expenses:` | Adding expense rows |
+| `board:` | Physical board design updates |
+| `phase:` | Phase gate completions or updates |
+| `fix:` | Corrections to existing content |
 
 ---
 
-## References
+## Contact
 
-- [Arduino Official Documentation](https://docs.arduino.cc/)
-- [GitHub Releases Documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)
-- [Semantic Versioning 2.0.0](https://semver.org/)
-- [ESP32 T-Display S3 Product Page](https://www.lilygo.cc/products/t-display-s3)
-- [Blender Rigid Body Simulation Docs](https://docs.blender.org/manual/en/latest/physics/rigid_body/index.html)
+**Dwain Henderson Jr.** — Superior Networks LLC, Dayton OH 45342
+**David** — Co-engineer, software lead
+
+*Demolition Derby is a private engineering project. All content in this repository is for documentation and development purposes.*

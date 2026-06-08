@@ -1,4 +1,4 @@
-# IRON DISTRICT — Master Project Hub
+# DEMOLITION DERBY — Master Project Hub
 
 > *Two engineers. Two cities. One system built from scratch.*
 
@@ -11,11 +11,11 @@
 
 ## The Project
 
-**Iron District** is a remote-collaborative engineering program built by DJ and David — two engineers who decided to stop talking about building something serious and actually do it. The project has three interlocking deliverables:
+**Demolition Derby** is a remote-collaborative engineering program built by DJ and David — two engineers who decided to stop talking about building something serious and actually do it. The project has three interlocking deliverables:
 
-**BLACKOUT** — a browser-based show-control system for an ESP32 T-Display S3. It lets you design a cue list of relay triggers synchronized to an audio track, simulate the show visually, monitor IP cameras, run continuity tests, and execute the show through a gated approval workflow. It exports a `.tdproj` file the microcontroller reads directly.
+**DETONATOR** — a browser-based show-control system for an ESP32 T-Display S3. It lets you design a cue list of relay triggers synchronized to an audio track, simulate the show visually, monitor IP cameras, run continuity tests, and execute the show through a gated approval workflow. It exports a `.tdproj` file the microcontroller reads directly.
 
-**GROUNDWORK** — an Arduino-based sensor data pipeline that captures acceleration, sound pressure, and vibration during physical test events. Data syncs to a VPS, runs through Python analytics notebooks, and calibrates Blender rigid-body simulations.
+**DOWNRANGE DOCUMENT** — an Arduino-based sensor data pipeline that captures acceleration, sound pressure, and vibration during physical test events. Data syncs to a VPS, runs through Python analytics notebooks, and calibrates Blender rigid-body simulations.
 
 **THE GRID** — a modular 1:50 scale city environment built from 3D-printed structures. Physical tests are measured, logged, and compared against Blender simulations frame-by-frame.
 
@@ -27,9 +27,9 @@
 
 | Repo | Codename | Description | Status |
 |------|----------|-------------|--------|
-| [blackout-show-control](https://github.com/SuperiorNetworks/blackout-show-control) | **BLACKOUT** | Browser show-control editor — audio timeline, relay triggers, sprite simulation, camera monitoring, continuity testing, live workflow | Active |
-| [groundwork-collapse-lab](https://github.com/SuperiorNetworks/groundwork-collapse-lab) | **GROUNDWORK** | Sensor firmware, Python analytics, Blender simulation pipeline, six-month project documentation | Active |
-| *(this repo)* | **IRON DISTRICT** | Master hub — project plan, Gantt, budget, phase gates, cross-repo links | Active |
+| [detonator](https://github.com/SuperiorNetworks/detonator) | **DETONATOR** | Browser show-control editor — audio timeline, relay triggers, sprite simulation, camera monitoring, continuity testing, live workflow | Active |
+| [downrange-document](https://github.com/SuperiorNetworks/downrange-document) | **DOWNRANGE DOCUMENT** | Sensor firmware, Python analytics, Blender simulation pipeline, six-month project documentation | Active |
+| *(this repo)* | **DEMOLITION DERBY** | Master hub — project plan, Gantt, budget, phase gates, cross-repo links | Active |
 
 ---
 
@@ -51,7 +51,7 @@
 
 ```mermaid
 gantt
-    title Iron District — Six-Month Master Schedule
+    title Demolition Derby — Six-Month Master Schedule
     dateFormat  YYYY-MM-DD
     axisFormat  %b %d
 
@@ -64,7 +64,7 @@ gantt
 
     section DJ — Software & Ops
     Repo setup, project board, safety docs       :dj1, 2026-06-07, 2w
-    BLACKOUT editor core tabs                    :dj2, after dj1, 3w
+    DETONATOR editor core tabs                    :dj2, after dj1, 3w
     VPS sync, ftp.sndaten.com endpoint           :dj3, after dj2, 2w
     Python analytics notebooks                   :dj4, 2026-08-01, 5w
     Release tagging, .tdproj export testing      :dj5, 2026-09-01, 4w
@@ -90,39 +90,39 @@ gantt
 
 ### Phase 1 — FOUNDATION (Weeks 1–4)
 
-**Objective.** Establish the complete technical foundation: repository structure, development environment, sensor hardware bench, BLACKOUT editor scaffold, safety documentation, and remote collaboration workflow.
+**Objective.** Establish the complete technical foundation: repository structure, development environment, sensor hardware bench, DETONATOR editor scaffold, safety documentation, and remote collaboration workflow.
 
-**DJ tasks.** Initialize all three repos with branch protection on `main`. Set up the GitHub Project board with columns: Backlog, In Progress, In Review, Done. Write and sign the safety checklist. Configure VPS storage at `ftp.sndaten.com` with a `/irondistrict/` project folder. Deploy the BLACKOUT editor to Manus hosting for David to access from Detroit.
+**DJ tasks.** Initialize all three repos with branch protection on `main`. Set up the GitHub Project board with columns: Backlog, In Progress, In Review, Done. Write and sign the safety checklist. Configure VPS storage at `ftp.sndaten.com` with a `/irondistrict/` project folder. Deploy the DETONATOR editor to Manus hosting for David to access from Detroit.
 
-**David tasks.** Assemble the Arduino sensor logger on a breadboard (MPU-6050 + MAX4466 + SD card module). Verify sensor logger firmware compiles and logs a 10-second sample CSV. Print two simple 1:50 scale test structures with scored weak points. Document the bench setup with photos and push to `groundwork-collapse-lab/hardware/`.
+**David tasks.** Assemble the Arduino sensor logger on a breadboard (MPU-6050 + MAX4466 + SD card module). Verify sensor logger firmware compiles and logs a 10-second sample CSV. Print two simple 1:50 scale test structures with scored weak points. Document the bench setup with photos and push to `downrange-document/hardware/`.
 
 **Joint tasks.** Agree on the `.tdproj` JSON schema. Agree on the sensor CSV column format. Hold weekly 30-minute build review every Sunday.
 
-**Gate criteria:** All hardware powers on without errors. BLACKOUT editor loads in browser. Safety checklist signed by both. At least one sample sensor CSV committed to the repo.
+**Gate criteria:** All hardware powers on without errors. DETONATOR editor loads in browser. Safety checklist signed by both. At least one sample sensor CSV committed to the repo.
 
 ---
 
 ### Phase 2 — VALIDATION: First Strike (Weeks 5–8)
 
-**Objective.** Run the first physical test, validate sensor data capture, and confirm the BLACKOUT editor can fire at least three relay triggers correctly in simulation mode.
+**Objective.** Run the first physical test, validate sensor data capture, and confirm the DETONATOR editor can fire at least three relay triggers correctly in simulation mode.
 
-**DJ tasks.** Build and test the Python analytics notebook against the Phase 1 sample CSV. Create the first `.tdproj` file with 5 triggers and verify export/import round-trip. Tag `v0.1-phase2-gate` release on the BLACKOUT repo.
+**DJ tasks.** Build and test the Python analytics notebook against the Phase 1 sample CSV. Create the first `.tdproj` file with 5 triggers and verify export/import round-trip. Tag `v0.1-phase2-gate` release on the DETONATOR repo.
 
 **David tasks.** Run first physical test: servo-triggered pin release on a printed structure. Capture dual-angle video and at least 30 seconds of sensor data. Upload raw data to `ftp.sndaten.com/irondistrict/phase2/`.
 
 **Joint tasks.** Review sensor data plot together; identify calibration offsets. Compare video frame timestamps against sensor spike timestamps. Decide on Blender import format (FBX vs. OBJ) for Phase 4.
 
-**Gate criteria:** Sensor data captured and plotted with no missing samples. At least 3 triggers fire correctly in BLACKOUT simulation. Phase 2 test video committed as a GitHub Release asset.
+**Gate criteria:** Sensor data captured and plotted with no missing samples. At least 3 triggers fire correctly in DETONATOR simulation. Phase 2 test video committed as a GitHub Release asset.
 
 ---
 
 ### Phase 3 — OBSERVATION: Eyes Open (Weeks 9–12)
 
-**Objective.** Add dual-camera observation to BLACKOUT, implement sprite simulation, and synchronize camera footage with the audio timeline.
+**Objective.** Add dual-camera observation to DETONATOR, implement sprite simulation, and synchronize camera footage with the audio timeline.
 
 **DJ tasks.** Implement camera tab: MJPEG stream display, snapshot capture. Implement sprite simulation: before/after image swap on relay state change. Capture before/after sprite images from Phase 2 test footage.
 
-**David tasks.** Build permanent dual-camera mount for the test rig. Configure both cameras with static IP addresses. Test MJPEG stream URLs and confirm they load in the BLACKOUT camera tab.
+**David tasks.** Build permanent dual-camera mount for the test rig. Configure both cameras with static IP addresses. Test MJPEG stream URLs and confirm they load in the DETONATOR camera tab.
 
 **Joint tasks.** Record a full synchronized test: audio + sensor + dual camera. Verify sprite images flip at the correct audio timestamps. Review Blender model import workflow.
 
@@ -148,7 +148,7 @@ gantt
 
 **Objective.** Execute a complete show run of the modular city environment, produce the final comparison video, publish all artifacts as a v1.0 release, and write the project debrief.
 
-**DJ tasks.** Load final `.tdproj` into BLACKOUT. Run full continuity test → approval → arm → countdown → execute workflow. Produce final debrief document: what worked, what changed, lessons learned.
+**DJ tasks.** Load final `.tdproj` into DETONATOR. Run full continuity test → approval → arm → countdown → execute workflow. Produce final debrief document: what worked, what changed, lessons learned.
 
 **David tasks.** Complete modular city environment (minimum 6 structures). Prepare repair kit and spare parts for final event day. Set up and test full rig the day before the event.
 
@@ -208,15 +208,15 @@ The two sub-project repos were built independently and share overlapping concept
 
 | # | Concept | Gap | Fix |
 |---|---------|-----|-----|
-| 1 | **Data schema** | BLACKOUT has `.tdproj` JSON; GROUNDWORK has sensor CSV — no cross-reference | Add `sensorDataUrl` field to `.tdproj`; add `docs/data-schema.md` to BLACKOUT repo |
-| 2 | **Relay numbering** | BLACKOUT uses R1–R16; GROUNDWORK uses generic "channel" language | Standardize R1–R15 effects, R16 continuity test across both repos |
-| 3 | **Camera config** | BLACKOUT has full `Camera` interface; GROUNDWORK has no camera config files | Add `cameras/README.md` to GROUNDWORK using the same field names as BLACKOUT |
-| 4 | **Continuity firmware** | BLACKOUT simulates continuity in browser; no matching Arduino sketch exists | Add `firmware/continuity_test/` to GROUNDWORK with an Arduino sketch for R16 |
-| 5 | **E-Stop hardware** | BLACKOUT has software E-stop; GROUNDWORK safety docs mention it abstractly | Add wiring diagram to GROUNDWORK `hardware/` for physical E-stop GPIO interrupt |
-| 6 | **Phase workflow mapping** | BLACKOUT's 7-step show workflow is not linked to the Phase 5 deliverable | Add a note to both READMEs: the 7-step workflow IS the Phase 5 deliverable |
-| 7 | **Audio timeline** | GROUNDWORK Phase 3 references "synchronized playback" but has no audio tooling | Add a note to GROUNDWORK: BLACKOUT is the synchronization tool |
-| 8 | **VPS sync docs** | GROUNDWORK has `ftp.sndaten.com` sync docs; BLACKOUT has none | Add `SYNC.md` to BLACKOUT explaining the `/irondistrict/` VPS folder structure |
-| 9 | **Sprite vs. Blender** | Both repos have visual components that appear redundant | Document clearly: BLACKOUT sprites = real-time preview; GROUNDWORK Blender = post-event analysis |
+| 1 | **Data schema** | DETONATOR has `.tdproj` JSON; DOWNRANGE DOCUMENT has sensor CSV — no cross-reference | Add `sensorDataUrl` field to `.tdproj`; add `docs/data-schema.md` to DETONATOR repo |
+| 2 | **Relay numbering** | DETONATOR uses R1–R16; DOWNRANGE DOCUMENT uses generic "channel" language | Standardize R1–R15 effects, R16 continuity test across both repos |
+| 3 | **Camera config** | DETONATOR has full `Camera` interface; DOWNRANGE DOCUMENT has no camera config files | Add `cameras/README.md` to DOWNRANGE DOCUMENT using the same field names as DETONATOR |
+| 4 | **Continuity firmware** | DETONATOR simulates continuity in browser; no matching Arduino sketch exists | Add `firmware/continuity_test/` to DOWNRANGE DOCUMENT with an Arduino sketch for R16 |
+| 5 | **E-Stop hardware** | DETONATOR has software E-stop; DOWNRANGE DOCUMENT safety docs mention it abstractly | Add wiring diagram to DOWNRANGE DOCUMENT `hardware/` for physical E-stop GPIO interrupt |
+| 6 | **Phase workflow mapping** | DETONATOR's 7-step show workflow is not linked to the Phase 5 deliverable | Add a note to both READMEs: the 7-step workflow IS the Phase 5 deliverable |
+| 7 | **Audio timeline** | DOWNRANGE DOCUMENT Phase 3 references "synchronized playback" but has no audio tooling | Add a note to DOWNRANGE DOCUMENT: DETONATOR is the synchronization tool |
+| 8 | **VPS sync docs** | DOWNRANGE DOCUMENT has `ftp.sndaten.com` sync docs; DETONATOR has none | Add `SYNC.md` to DETONATOR explaining the `/irondistrict/` VPS folder structure |
+| 9 | **Sprite vs. Blender** | Both repos have visual components that appear redundant | Document clearly: DETONATOR sprites = real-time preview; DOWNRANGE DOCUMENT Blender = post-event analysis |
 | 10 | **Release tags** | Neither repo has any tags yet | Both repos tag simultaneously at each gate: `v0.N-phaseN-gate` |
 
 ---
@@ -245,7 +245,7 @@ Each phase gate review should answer these five questions and produce a written 
 
 **Release tagging.** Tags follow the format `vMAJOR.MINOR-phaseN-gate`. Each release must include a description summarizing what was completed, all relevant artifacts attached (sensor CSV, `.tdproj` file, photos, video clips), and an updated budget tracker screenshot.
 
-**Data sync.** Sensor data and project files are synced to `ftp.sndaten.com/irondistrict/` using the workflow documented in `groundwork-collapse-lab/host-tools/sync/README.md`. The folder structure is:
+**Data sync.** Sensor data and project files are synced to `ftp.sndaten.com/irondistrict/` using the workflow documented in `downrange-document/host-tools/sync/README.md`. The folder structure is:
 
 ```
 ftp.sndaten.com/irondistrict/

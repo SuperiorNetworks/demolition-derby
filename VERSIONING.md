@@ -1,6 +1,6 @@
-# Versioning Policy — Iron District
+# Versioning Policy — Demolition Derby
 
-All three repos in the Iron District project use the same tag format so releases are easy to correlate across projects.
+All three repos in the Demolition Derby project use the same tag format so releases are easy to correlate across projects.
 
 ## Tag Format
 

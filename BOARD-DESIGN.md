@@ -111,6 +111,7 @@ The board should look like a piece of equipment, not a school project. Reference
 - [ ] Determine charge point design at each pad (clip terminal? solder pad? banana jack?)
 - [ ] Decide on scenery items to purchase for Phase 1 (roads, vehicles, trees)
 - [ ] Confirm transport method (vehicle, case, bag)
+- [ ] Confirm scenery order (magnetic road kit and/or high-rise model kit) — order by late June to ensure delivery before July 10, 2026
 
 ---
 

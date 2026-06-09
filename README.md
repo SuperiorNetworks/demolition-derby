@@ -6,9 +6,9 @@
 
 ---
 
-## 🗓️ PHASE 1 TARGET DATE — **Friday, July 10, 2025**
+## 🗓️ PHASE 1 TARGET DATE — **Friday, July 10, 2026**
 
-**Goal:** Both Dwain and David arrive with their individual 4×6 project boards, assemble them side-by-side, and fire the first live relay-triggered sequences together.
+**Goal:** Both Dwain and David arrive with their individual 4×6 project boards, connect them side-by-side, and fire the first live relay-triggered sequences together in person — the first real detonation event of the Demolition Derby program.
 
 ---
 
@@ -126,13 +126,33 @@ All project expenses are logged here. Both engineers track independently and rep
 
 ---
 
-## Additional Building Materials & Scenery (Future Phases)
+## Building Materials & Scenery — Discussion List for Dwain & David
 
-The following items have been identified as candidates for Phase 2+ structure and scenery. No purchases have been made yet.
+The following items have been identified as candidates for Phase 1 scenery and Phase 2+ structure materials. No purchases have been made beyond the domino sets. Review each link and discuss which to order before July 10, 2026.
 
-1. **City Building Blocks (Temu search)** — [Browse options](https://www.temu.com/search_result.html?search_key=city%20building%20blocks&search_method=suggest&sprefix=city%20building%20blocks)
-2. **51-pc Magnetic Road Construction Kit** (crane + vehicles, STEM) — [Product link](https://www.temu.com/51pcs-magnetic-road-construction-kit-featuring-crane-and-vehicles-stem-educational-building-blocks-urban-development-toy-set-ideal-holiday-present-for-children-aged-3-and-above-g-606120026426430.html)
-3. **Wooden 3D Puzzle DIY Town Assembly Model** (with characters and accessories) — [Product link](https://www.temu.com/-building-wooden-3d-puzzle-diy--town-assembly-model-with-characters-and-accessories-creative-craft-toys--2--doll-ornaments-g-605842917145710.html)
+### Phase 1 — Purchased
+
+| Item | Engineer | Cost | Link |
+|------|----------|------|------|
+| 201-pc Colorful Domino Building Blocks | Dwain & David | $15.00 each | [Temu](https://www.temu.com/201-colorful-domino-building-blocks-a-fun-stacking-and-construction-toy--halloween-birthdays-and-christmas-gifts-educational--colors-may--g-605976816111107.html) |
+
+### Phase 1 Scenery Candidates — Order Before July 10
+
+| # | Item | Notes | Link |
+|---|------|-------|------|
+| 1 | **City Building Blocks (search results)** | Browse full selection | [Temu Search](https://www.temu.com/search_result.html?search_key=city%20building%20blocks&search_method=suggest&sprefix=city%20building%20blocks) |
+| 2 | **51-pc Magnetic Road Construction Kit** | Crane + vehicles, STEM, urban layout | [Temu](https://www.temu.com/51pcs-magnetic-road-construction-kit-featuring-crane-and-vehicles-stem-educational-building-blocks-urban-development-toy-set-ideal-holiday-present-for-children-aged-3-and-above-g-606120026426430.html) |
+| 3 | **Wooden 3D Puzzle DIY Town Assembly Model** | Characters + accessories, craftable | [Temu](https://www.temu.com/-building-wooden-3d-puzzle-diy--town-assembly-model-with-characters-and-accessories-creative-craft-toys--2--doll-ornaments-g-605842917145710.html) |
+| 4 | **Model Planning Building — Apartment / High-Rise** | Plastic sand scene building material, architectural scale model | [Temu](https://www.temu.com/model-planning-building-apartment-house-high-building-sand-building-scene-building-production-material-plastic--g-606019816125554.html) |
+
+### Phase 2+ Structure Material Candidates
+
+| # | Item | Notes | Link |
+|---|------|-------|------|
+| 5 | **51-pc Magnetic Road Construction Kit** *(also Phase 1 candidate)* | Expandable road/city layout | [Temu](https://www.temu.com/51pcs-magnetic-road-construction-kit-featuring-crane-and-vehicles-stem-educational-building-blocks-urban-development-toy-set-ideal-holiday-present-for-children-aged-3-and-above-g-606120026426430.html) |
+| 6 | **Model Planning Building — Apartment / High-Rise** *(also Phase 1 candidate)* | Plastic architectural model pieces, good for multi-story structures | [Temu](https://www.temu.com/model-planning-building-apartment-house-high-building-sand-building-scene-building-production-material-plastic--g-606019816125554.html) |
+
+> **Note for Dwain & David:** Items 2 and 4 are the strongest Phase 1 scenery candidates — the magnetic road kit gives you city infrastructure (roads, vehicles) and the high-rise model kit gives you a realistic-looking structure adjacent to the domino pads. Discuss and decide before ordering so you both get the same items.
 
 ---
 
@@ -140,7 +160,7 @@ The following items have been identified as candidates for Phase 2+ structure an
 
 | Phase | Codename | Target | Key Deliverable |
 |-------|----------|--------|----------------|
-| **1** | Lay the Ground | **July 10, 2025** 🎯 | Both boards built, 4-ch relay fires via DETONATOR over internet |
+| **1** | Lay the Ground | **July 10, 2026** 🎯 | Both boards present, connected in person — live 4-ch relay fires via DETONATOR, first detonation event |
 | **2** | First Strike | August 2025 | 16-ch relay, expanded structures, second building material iteration |
 | **3** | Eyes Open | September 2025 | Cameras live, sensors logging, DOWNRANGE DOCUMENT pipeline active |
 | **4** | The Machine | October 2025 | Automated sensor → CSV → Python → Blender pipeline end-to-end |

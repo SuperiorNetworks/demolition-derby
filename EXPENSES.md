@@ -1,5 +1,5 @@
 # EXPENSES — DEMOLITION DERBY PROGRAM
-**Superior Networks LLC · Dwain Henderson Jr. & David**
+**Superior Networks LLC · Dwain Henderson Jr. (Dayton, OH) & David (Detroit, MI)**
 
 > All project expenses are logged here. Both engineers track independently and report at each integration session. Add a row and commit with the message format: `expenses: add [item] [date]`
 

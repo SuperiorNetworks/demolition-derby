@@ -2,7 +2,7 @@
 ## Demolition Derby — Phase 1 Physical Board
 
 **Document Status:** Active — Phase 1 decisions locked as of June 8, 2026
-**Engineers:** Dwain Henderson Jr. (board visualization, layout, transport) · David (software, relay firmware)
+**Engineers:** Dwain Henderson Jr., Dayton, OH — Research, Documentation & Safety Lead · David, Detroit, MI — Firmware & Systems Engineer (ESP32, relay logic, DETONATOR app)
 
 ---
 

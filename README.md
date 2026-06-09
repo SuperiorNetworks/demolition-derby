@@ -1,6 +1,6 @@
 # DEMOLITION DERBY
 ### A Remote Show-Control & Structural Collapse Simulation Program
-**Superior Networks LLC · Dwain Henderson Jr. & David · Dayton, OH**
+**Superior Networks LLC · Dwain Henderson Jr. (Dayton, OH) & David (Detroit, MI)**
 
 > *Two engineers. Two boards. One system built from scratch.*
 
@@ -14,7 +14,11 @@
 
 ## Program Overview
 
-Demolition Derby is a three-repository engineering program building a complete remote show-control system: a browser-based sequencing editor, a relay-trigger hardware board, and a sensor/analytics/simulation pipeline. The program is developed in parallel by two engineers (Dwain and David) who each build and test independently, then integrate at defined milestone dates.
+Demolition Derby is a three-repository engineering program building a complete remote show-control system: a browser-based sequencing editor, a relay-trigger hardware board, and a sensor/analytics/simulation pipeline. The program is developed in parallel by two engineers working across two cities — **David in Detroit, MI** and **Dwain in Dayton, OH** — who each build and test independently, then integrate at defined milestone dates.
+
+**David** leads the full technical stack: ESP32 firmware development, relay logic design, hardware board architecture, and the DETONATOR browser application. He is proving that the software, the microcontroller, and the relay hardware all communicate correctly as a unified system.
+
+**Dwain** leads research, documentation, physical board construction, and safety operations. He builds alongside David as David proves the logic — replicating the hardware setup in Dayton, testing sequences, and maintaining the project record. Dwain is also the designated safety officer for all live-fire sessions.
 
 The program is organized into three sub-projects, each with its own GitHub repository:
 
@@ -88,10 +92,10 @@ The following decisions were made jointly by Dwain and David and are locked for 
 
 ### Division of Labor
 
-| Engineer | Primary Focus — Phase 1 |
-|----------|------------------------|
-| **Dwain** | Board visualization, physical layout, transport design, domino structure placement |
-| **David** | DETONATOR software development, relay firmware, web-to-relay communication |
+| Engineer | Location | Primary Role | Phase 1 Focus |
+|----------|----------|-------------|---------------|
+| **David** | Detroit, MI | **Firmware & Systems Engineer** — ESP32 programming, relay logic design, hardware board architecture, DETONATOR browser app development | Prove end-to-end: browser → internet → ESP32 → relay fires on sequence |
+| **Dwain** | Dayton, OH | **Research, Documentation & Safety Lead** — project organization, build replication, testing alongside David, safety officer for all live-fire sessions | Replicate David's hardware build in Dayton; document decisions; own the safety protocol |
 
 ---
 

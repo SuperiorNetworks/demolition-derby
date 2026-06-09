@@ -144,6 +144,8 @@ The following items have been identified as candidates for Phase 1 scenery and P
 | 2 | **51-pc Magnetic Road Construction Kit** | Crane + vehicles, STEM, urban layout | [Temu](https://www.temu.com/51pcs-magnetic-road-construction-kit-featuring-crane-and-vehicles-stem-educational-building-blocks-urban-development-toy-set-ideal-holiday-present-for-children-aged-3-and-above-g-606120026426430.html) |
 | 3 | **Wooden 3D Puzzle DIY Town Assembly Model** | Characters + accessories, craftable | [Temu](https://www.temu.com/-building-wooden-3d-puzzle-diy--town-assembly-model-with-characters-and-accessories-creative-craft-toys--2--doll-ornaments-g-605842917145710.html) |
 | 4 | **Model Planning Building — Apartment / High-Rise** | Plastic sand scene building material, architectural scale model | [Temu](https://www.temu.com/model-planning-building-apartment-house-high-building-sand-building-scene-building-production-material-plastic--g-606019816125554.html) |
+| 5 | **Model & Hobby Building — Diorama Materials** | Full diorama supply category — terrain, foliage, ground cover, scale details | [Temu](https://www.temu.com/model-hobby-building-o3-2188.html?opt_level=2&title=Model%20%26%20Hobby%20Building&show_search_type=0) |
+| 6 | **City Building Mat — Base Mat Search** | Printed city grid / road mat for the board base surface | [Temu Search](https://www.temu.com/search_result.html?search_key=city%20buildingmat&search_method=user) |
 
 ### Phase 2+ Structure Material Candidates
 
@@ -152,7 +154,55 @@ The following items have been identified as candidates for Phase 1 scenery and P
 | 5 | **51-pc Magnetic Road Construction Kit** *(also Phase 1 candidate)* | Expandable road/city layout | [Temu](https://www.temu.com/51pcs-magnetic-road-construction-kit-featuring-crane-and-vehicles-stem-educational-building-blocks-urban-development-toy-set-ideal-holiday-present-for-children-aged-3-and-above-g-606120026426430.html) |
 | 6 | **Model Planning Building — Apartment / High-Rise** *(also Phase 1 candidate)* | Plastic architectural model pieces, good for multi-story structures | [Temu](https://www.temu.com/model-planning-building-apartment-house-high-building-sand-building-scene-building-production-material-plastic--g-606019816125554.html) |
 
-> **Note for Dwain & David:** Items 2 and 4 are the strongest Phase 1 scenery candidates — the magnetic road kit gives you city infrastructure (roads, vehicles) and the high-rise model kit gives you a realistic-looking structure adjacent to the domino pads. Discuss and decide before ordering so you both get the same items.
+> **Note for Dwain & David:** Items 2, 4, and 6 are the strongest Phase 1 picks — the magnetic road kit gives you city infrastructure, the high-rise model kit gives you realistic structures, and a printed city mat gives the board a finished base that makes everything look intentional. Item 5 (diorama materials) is a Phase 2 investment — terrain, foliage, and ground cover will make the board look like a real film set. Discuss and decide before ordering so you both get the same items.
+
+---
+
+## Safety
+
+The Demolition Derby program operates with small consumer-grade firecrackers as the charge event at each relay pad. The following safety rules apply to every session, including solo build sessions and the July 10, 2026 live event.
+
+### General Rules
+
+| Rule | Requirement |
+|------|-------------|
+| **Minimum distance** | All personnel must be at least 10 feet from the board during any armed sequence | 
+| **Eye protection** | Safety glasses required for all personnel present during armed or live-fire sessions |
+| **Ear protection** | Hearing protection recommended during live-fire sequences |
+| **Fire extinguisher** | A dry chemical or CO₂ extinguisher must be within arm's reach at all times during live-fire |
+| **Clear the area** | Confirm no bystanders are within the safety perimeter before arming |
+| **No alcohol** | No alcohol or impairment during any session involving live charges |
+| **One operator** | Only one person operates DETONATOR during a live-fire sequence |
+| **E-STOP accessible** | The E-STOP button in DETONATOR must be visible and reachable by the operator at all times |
+
+### Arm / Fire Sequence Protocol
+
+The DETONATOR app enforces a multi-step sequence before any relay fires. The protocol is:
+
+1. **LOAD** — Project is loaded and reviewed. No charges armed.
+2. **SIMULATION** — Visual simulation run confirms sequence timing. No relay output.
+3. **CONTINUITY TEST** — R4 continuity check confirms wiring integrity. No charge fired.
+4. **APPROVAL** — Both engineers verbally confirm readiness. Operator clicks Approve.
+5. **ARM** — System enters armed state. Header turns amber. 10-second countdown begins.
+6. **EXECUTE** — Sequence fires on schedule. E-STOP available throughout.
+7. **SAFE** — System returns to standby. Board is physically inspected before approach.
+
+### Phase 1 Specific Notes
+
+Phase 1 uses small consumer firecrackers as the charge event. These are legal consumer fireworks. The following additional rules apply:
+
+- Charges are placed at relay pads immediately before the session — never left wired and unattended
+- The board is treated as live from the moment charges are placed until the post-fire inspection is complete
+- Both engineers must be present and in agreement before any charge is placed or fired
+- The session location must be outdoors or in a well-ventilated space with adequate clearance above the board
+- A bucket of water or sand must be present as a secondary fire suppression option
+
+### Emergency Contacts
+
+| Contact | Number |
+|---------|--------|
+| Emergency / Fire | 911 |
+| Poison Control | 1-800-222-1222 |
 
 ---
 
